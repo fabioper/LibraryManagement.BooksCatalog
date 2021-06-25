@@ -1,7 +1,7 @@
 ﻿using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using BooksCatalog.Infra.Messaging.Consumers;
+using BooksCatalog.Infra.Messaging.Contracts;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using RabbitMQ.Client;

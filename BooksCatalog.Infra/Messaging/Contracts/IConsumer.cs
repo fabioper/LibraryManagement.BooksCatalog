@@ -1,4 +1,4 @@
-﻿namespace BooksCatalog.Infra.Messaging.Consumers
+﻿namespace BooksCatalog.Infra.Messaging.Contracts
 {
     public interface IConsumer<TMessage>
     {

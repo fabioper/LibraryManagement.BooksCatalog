@@ -3,6 +3,8 @@ using BooksCatalog.API.Services;
 using BooksCatalog.API.Services.Contracts;
 using BooksCatalog.Domain.Interfaces;
 using BooksCatalog.Infra.Data;
+using BooksCatalog.Infra.Messaging;
+using BooksCatalog.Infra.Messaging.Contracts;
 using BooksCatalog.Infra.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,14 +34,12 @@ namespace BooksCatalog.API
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "BooksCatalog.API", Version = "v1"});
             });
 
-            services.AddLogging(builder =>
-            {
-                builder.AddSeq(Configuration.GetSection("Seq"));
-            });
+            services.AddLogging(builder => builder.AddSeq(Configuration.GetSection("Seq")));
 
             services.AddDbContext<BooksCatalogContext>();
 
             services.AddScoped<IBooksService, BooksService>();
+            services.AddScoped<IServiceBus, ServiceBus>();
             
             services.AddScoped<IBookRepository, BooksRepository>();
 
