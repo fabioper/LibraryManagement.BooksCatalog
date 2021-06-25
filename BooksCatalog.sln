@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksCatalog.Domain", "BooksCatalog.Domain\BooksCatalog.Domain.csproj", "{6BDFC1DD-E4DB-4E72-A5D4-5BF4E410A4BF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksCatalog.Infra", "BooksCatalog.Infra\BooksCatalog.Infra.csproj", "{44E9F1F1-83F7-41C7-9B4B-27886A4C8064}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{6BDFC1DD-E4DB-4E72-A5D4-5BF4E410A4BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BDFC1DD-E4DB-4E72-A5D4-5BF4E410A4BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BDFC1DD-E4DB-4E72-A5D4-5BF4E410A4BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44E9F1F1-83F7-41C7-9B4B-27886A4C8064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44E9F1F1-83F7-41C7-9B4B-27886A4C8064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44E9F1F1-83F7-41C7-9B4B-27886A4C8064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44E9F1F1-83F7-41C7-9B4B-27886A4C8064}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
