@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksCatalog.Infra", "Books
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksCatalog.API", "BooksCatalog.API\BooksCatalog.API.csproj", "{50C557B1-0C0D-4A03-8480-0E430247A83B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksCatalog.Domain.Tests", "BooksCatalog.Domain.Tests\BooksCatalog.Domain.Tests.csproj", "{BE1D8F0C-A2C4-468A-BF41-307C7A96939E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{50C557B1-0C0D-4A03-8480-0E430247A83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50C557B1-0C0D-4A03-8480-0E430247A83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50C557B1-0C0D-4A03-8480-0E430247A83B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE1D8F0C-A2C4-468A-BF41-307C7A96939E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE1D8F0C-A2C4-468A-BF41-307C7A96939E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE1D8F0C-A2C4-468A-BF41-307C7A96939E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE1D8F0C-A2C4-468A-BF41-307C7A96939E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

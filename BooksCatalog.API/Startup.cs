@@ -58,7 +58,7 @@ namespace BooksCatalog.API
                     c.SwaggerEndpoint("/swagger/v1/swagger.json", "BooksCatalog.API v1"));
             }
 
-            app.UseHttpsRedirection();
+            /*app.UseHttpsRedirection();*/
 
             app.UseRouting();
 

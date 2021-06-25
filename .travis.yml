@@ -1,0 +1,11 @@
+﻿language: csharp
+solution: BooksCatalog.sln
+mono: none
+dotnet: 3.1
+sudo: required
+install:
+  - sudo apt-get install nuget
+  - nuget restore BooksCatalog.sln
+script:
+  - dotnet build
+  - dotnet test
