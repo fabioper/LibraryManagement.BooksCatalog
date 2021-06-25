@@ -44,6 +44,7 @@ namespace BooksCatalog.API
             services.AddScoped<IBookRepository, BooksRepository>();
 
             services.AddHostedService<BookRentedConsumer>();
+            services.AddHostedService<BookReturnedConsumer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
