@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using BooksCatalog.API.Events.Messages;
+using BooksCatalog.API.Events;
 using BooksCatalog.API.Models;
 using BooksCatalog.API.Services.Contracts;
 using BooksCatalog.Domain.Books;

@@ -5,14 +5,14 @@ using Microsoft.Extensions.Logging;
 
 namespace BooksCatalog.API.Consumers
 {
-    public class BookRentedConsumer : Consumer<BookRented>
+    public class BookRentedConsumer : Consumer<BookLoaned>
     {
         private readonly IServiceScopeFactory _serviceScopeFactory;
 
-        public BookRentedConsumer(IServiceScopeFactory serviceScopeFactory) : base("book-rented")
+        public BookRentedConsumer(IServiceScopeFactory serviceScopeFactory) : base("book-loaned")
             => _serviceScopeFactory = serviceScopeFactory;
 
-        public override void HandleMessage(BookRented message)
+        public override void HandleMessage(BookLoaned message)
         {
             using var scope = _serviceScopeFactory.CreateScope();
             var logger = scope.ServiceProvider.GetRequiredService<ILogger<BookRentedConsumer>>();
@@ -22,7 +22,7 @@ namespace BooksCatalog.API.Consumers
             book.RentBook();
             bookRepository.SaveChanges();
             
-            logger.LogInformation($"Book {message.BookId} rented");
+            logger.LogInformation($"Book {message.BookId} loaned");
         }
     }
 }

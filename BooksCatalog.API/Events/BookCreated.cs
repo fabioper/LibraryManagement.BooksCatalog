@@ -1,6 +1,6 @@
 ﻿using BooksCatalog.Infra.Messaging;
 
-namespace BooksCatalog.API.Events.Messages
+namespace BooksCatalog.API.Events
 {
     public class BookCreated : EventMessage
     {
