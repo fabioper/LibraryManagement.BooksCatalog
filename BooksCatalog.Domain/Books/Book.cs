@@ -5,16 +5,17 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public string Author { get; set; }
-        public Status Status { get; set; }
+        public bool IsAvailable { get; set; }
 
-        public void RentBook() => Status = Status.Rented;
+        public void RentBook() => IsAvailable = false;
+        public void ReturnBook() => IsAvailable = true;
 
         public Book(string title, string description, string author)
         {
             Title = title;
             Description = description;
             Author = author;
-            Status = Status.Free;
+            IsAvailable = true;
         }
 
         public Book() // EF required
