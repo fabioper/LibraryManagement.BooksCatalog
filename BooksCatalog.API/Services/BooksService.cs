@@ -15,14 +15,11 @@ namespace BooksCatalog.API.Services
             _bookRepository = bookRepository;
         }
 
-        public IEnumerable<Book> GetAll(Status bookStatus)
+        public IEnumerable<Book> GetAll(bool? isAvailable)
         {
-            return _bookRepository.GetByStatus(bookStatus);
-        }
-        
-        public IEnumerable<Book> GetAll()
-        {
-            return _bookRepository.GetAll();
+            return isAvailable.HasValue
+                ? _bookRepository.GetByStatus(isAvailable.Value)
+                : _bookRepository.GetAll();
         }
 
         public void Add(AddBookRequest request)

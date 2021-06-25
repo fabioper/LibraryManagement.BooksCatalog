@@ -20,10 +20,10 @@ namespace BooksCatalog.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAll([FromQuery] Status bookStatus)
+        public IActionResult GetAll([FromQuery] bool? availabilityStatus)
         {
             _logger.LogInformation("Retrieving books");
-            var books = _booksService.GetAll(bookStatus);
+            var books = _booksService.GetAll(availabilityStatus);
             return Ok(books);
         }
 

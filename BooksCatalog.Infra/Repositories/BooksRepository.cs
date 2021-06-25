@@ -20,10 +20,10 @@ namespace BooksCatalog.Infra.Repositories
         
         public IEnumerable<Book> GetAll() => _books.AsNoTracking().ToList();
 
-        public IEnumerable<Book> GetByStatus(Status status)
+        public IEnumerable<Book> GetByStatus(bool isAvailable)
         {
             return _books.AsNoTracking()
-                .Where(b => b.Status == status)
+                .Where(b => b.IsAvailable == isAvailable)
                 .ToList();
         }
 

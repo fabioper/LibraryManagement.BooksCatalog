@@ -15,7 +15,7 @@ namespace BooksCatalog.Infra.Data.Configurations
             builder.Property(b => b.Title);
             builder.Property(b => b.Author);
             builder.Property(b => b.Description);
-            builder.Property(b => b.Status);
+            builder.Property(b => b.IsAvailable);
         }
     }
 }

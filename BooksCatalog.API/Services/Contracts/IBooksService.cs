@@ -6,7 +6,7 @@ namespace BooksCatalog.API.Services.Contracts
 {
     public interface IBooksService
     {
-        IEnumerable<Book> GetAll(Status bookStatus);
+        IEnumerable<Book> GetAll(bool? isAvailable);
         void Add(AddBookRequest request);
     }
 }
