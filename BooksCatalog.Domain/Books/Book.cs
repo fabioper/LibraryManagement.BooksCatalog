@@ -8,13 +8,14 @@
         public Status Status { get; set; }
 
         public void RentBook() => Status = Status.Rented;
+        public void ReturnBook() => Status = Status.Available;
 
         public Book(string title, string description, string author)
         {
             Title = title;
             Description = description;
             Author = author;
-            Status = Status.Free;
+            Status = Status.Available;
         }
 
         public Book() // EF required
