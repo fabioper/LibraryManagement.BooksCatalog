@@ -24,7 +24,6 @@ stages:
       inputs:
         containerRegistry: 'MyDockerHub'
         repository: 'books-catalog'
-        command: 'buildAndPush'
+        command: 'build'
         Dockerfile: '**/Dockerfile'
-        tags: |
-          $(tag)
+      
