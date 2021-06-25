@@ -1,3 +1,4 @@
+using BooksCatalog.API.Consumers;
 using BooksCatalog.API.Services;
 using BooksCatalog.API.Services.Contracts;
 using BooksCatalog.Domain.Interfaces;
@@ -8,6 +9,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace BooksCatalog.API
@@ -30,11 +32,18 @@ namespace BooksCatalog.API
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "BooksCatalog.API", Version = "v1"});
             });
 
+            services.AddLogging(builder =>
+            {
+                builder.AddSeq(Configuration.GetSection("Seq"));
+            });
+
             services.AddDbContext<BooksCatalogContext>();
 
             services.AddScoped<IBooksService, BooksService>();
             
             services.AddScoped<IBookRepository, BooksRepository>();
+
+            services.AddHostedService<BookRentedConsumer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
