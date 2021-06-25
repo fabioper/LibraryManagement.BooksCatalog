@@ -10,7 +10,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
+      <ProjectReference Include="..\BooksCatalog.Domain\BooksCatalog.Domain.csproj" />
+      <ProjectReference Include="..\BooksCatalog.Infra\BooksCatalog.Infra.csproj" />
     </ItemGroup>
 
 </Project>
