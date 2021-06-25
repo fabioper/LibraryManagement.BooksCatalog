@@ -8,7 +8,7 @@
         public bool IsAvailable { get; set; }
 
         public void RentBook() => IsAvailable = false;
-        public void ReturnBook() => IsAvailable = false;
+        public void ReturnBook() => IsAvailable = true;
 
         public Book(string title, string description, string author)
         {
