@@ -3,6 +3,6 @@
     public enum Status
     {
         Rented,
-        Free
+        Available
     }
 }
